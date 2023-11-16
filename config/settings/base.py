@@ -4,6 +4,7 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
+from celery.schedules import crontab
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # fullcycledev/
@@ -289,7 +290,7 @@ CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 CELERY_BEAT_SCHEDULE = {
     "get_socials_stats": {
         "task": "fullcycledev.socials.tasks.get_socials_stats",
-        "schedule": 60.0,
+        "schedule": crontab(hour="2", minute="0"),
     },
 }
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html#worker-send-task-events
@@ -317,7 +318,6 @@ ACCOUNT_FORMS = {"signup": "fullcycledev.users.forms.UserSignupForm"}
 SOCIALACCOUNT_ADAPTER = "fullcycledev.users.adapters.SocialAccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/forms.html
 SOCIALACCOUNT_FORMS = {"signup": "fullcycledev.users.forms.UserSocialSignupForm"}
-
 
 # Your stuff...
 # ------------------------------------------------------------------------------
