@@ -14,3 +14,7 @@ class SocialStats(BaseModel):
     youtube_subscribers = models.IntegerField(default=0)
     twitter_followers = models.IntegerField(default=0)
     discord_members = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = "Social Stats"
+        ordering = ["-created"]

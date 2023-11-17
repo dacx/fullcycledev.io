@@ -1,8 +1,8 @@
 from django.urls import path
 
-from fullcycledev.socials.views import twitch_oauth_callback_handler
+from fullcycledev.socials.views import home
 
 app_name = "socials"
 urlpatterns = [
-    path("twitch/callback/", view=twitch_oauth_callback_handler, name="twitch_oauth_callback_handler"),
+    path("", view=home, name="home"),
 ]
