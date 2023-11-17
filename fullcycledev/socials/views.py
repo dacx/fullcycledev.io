@@ -1,13 +1,11 @@
 from django.db.models import QuerySet
 from django.http import HttpRequest
 from django.shortcuts import render
-from django.views.decorators.cache import cache_page
 
 from fullcycledev.socials.models import SocialStats
 from fullcycledev.users.models import User
 
 
-# @cache_page(60 * 60 * 2)  # cached for 2 hours
 def home(request: HttpRequest):
     users_count: int = User.objects.count()
     if SocialStats.objects.count() < 2:

@@ -28,10 +28,10 @@
               </span>
             </div>
             {% if current %}
-            <div class="col">
-              <div class="font-weight-medium">{{ current.twitch_followers }} {% trans 'Followers' %}</div>
-              <div class="text-secondary">{{ delta.twitch_followers }} ({% trans '24h delta' %})</div>
-            </div>
+              <div class="col">
+                <div class="font-weight-medium">{{ current.twitch_followers }} {% trans 'Followers' %}</div>
+                <div class="text-secondary">{{ delta.twitch_followers }} ({% trans '24h delta' %})</div>
+              </div>
             {% else %}
               <div class="col">
                 <div class="font-weight-medium">{% trans 'Not enough data.' %}</div>
@@ -65,15 +65,15 @@
               </span>
             </div>
             {% if current %}
-            <div class="col">
-              <div class="font-weight-medium">{{ current.youtube_subscribers }} {% trans 'Subscribers' %}</div>
-              <div class="text-secondary">{{ delta.youtube_subscribers }} ({% trans '24h delta' %})</div>
-            </div>
+              <div class="col">
+                <div class="font-weight-medium">{{ current.youtube_subscribers }} {% trans 'Subscribers' %}</div>
+                <div class="text-secondary">{{ delta.youtube_subscribers }} ({% trans '24h delta' %})</div>
+              </div>
             {% else %}
-            <div class="col">
-              <div class="font-weight-medium">{% trans 'Not enough data.' %}</div>
-              <div class="text-secondary">{{ delta.twitch_followers }} ({% trans '24h delta' %})</div>
-            </div>
+              <div class="col">
+                <div class="font-weight-medium">{% trans 'Not enough data.' %}</div>
+                <div class="text-secondary">{{ delta.twitch_followers }} ({% trans '24h delta' %})</div>
+              </div>
             {% endif %}
           </div>
         </div>
@@ -101,10 +101,10 @@
               </span>
             </div>
             {% if current %}
-            <div class="col">
-              <div class="font-weight-medium">{{ current.discord_members }} {% trans 'Members' %}</div>
-              <div class="text-secondary">{{ delta.discord_members }} ({% trans '24h delta' %})</div>
-            </div>
+              <div class="col">
+                <div class="font-weight-medium">{{ current.discord_members }} {% trans 'Members' %}</div>
+                <div class="text-secondary">{{ delta.discord_members }} ({% trans '24h delta' %})</div>
+              </div>
             {% else %}
               <div class="col">
                 <div class="font-weight-medium">{% trans 'Not enough data.' %}</div>
