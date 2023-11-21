@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+  <header class="hero pt-5 pb-0 bg-gradient">
+    <div class="container">
+      <h1 class="hero-title aos-init aos-animate rainbow-text"
+          data-aos="zoom-y-out">
+        We are Full
+        Cycle Developers.
+      </h1>
+      <p class="hero-description mt-4 aos-init aos-animate"
+         data-aos="zoom-y-out"
+         data-aos-delay="150">
+        We are a
+        community of software developers that that aim to own the entire product life cycle and turn these skills into
+        lucrative businesses.
+      </p>
+    </div>
+  </header>
+  {% include 'home/components/social_stats.html' %}
+{% endblock content %}
